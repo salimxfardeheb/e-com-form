@@ -39,7 +39,7 @@ Enregistrer le code ne suffit pas : l'URL `/exec` continue de servir l'ancienne 
 
 L'URL reste la même. Ne passe pas par « Nouveau déploiement » : cela crée une **nouvelle URL**, qu'il faudrait recoller dans `js/config.js`.
 
-> Si tu modifies `COLUMNS` alors que des réponses existent déjà, la ligne d'en-têtes n'est **pas** réécrite (elle n'est écrite que sur une feuille vide). Aligne les colonnes existantes à la main, ou renomme l'ancienne feuille pour repartir d'une feuille `Réponses` vide.
+> Les titres de colonnes (ligne 1) sont définis dans `COLUMNS_DEF` et réécrits automatiquement s'ils changent (ou via *Exécuter → `setupHeaders`*). Si tu ajoutes, retires ou réordonnes des colonnes alors que des réponses existent déjà, les anciennes lignes ne sont **pas** déplacées : aligne-les à la main, ou renomme l'ancienne feuille pour repartir d'une feuille `Réponses` vide.
 
 ## 3. Brancher le front
 
