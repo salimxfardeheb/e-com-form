@@ -578,6 +578,9 @@ async function submit() {
       headers: { "Content-Type": "text/plain;charset=utf-8" },
     });
     if (!res.ok) throw new Error("HTTP " + res.status);
+    // Apps Script répond 200 même en cas d'erreur : seul `ok: true` vaut succès.
+    const result = await res.json();
+    if (!result || result.ok !== true) throw new Error(result?.error || "réponse invalide");
     state.done = true;
   } catch {
     state.submitFailed = true;
