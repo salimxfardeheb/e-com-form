@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Questionnaire Flowmerce</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="lang-switch" id="lang-switch" role="group"></div>
+  </header>
+
+  <main class="container">
+    <div class="progress" id="progress">
+      <p class="progress-text" id="progress-text"></p>
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+    </div>
+
+    <form id="form" novalidate>
+      <h1 class="step-title" id="step-title" tabindex="-1"></h1>
+      <div id="questions"></div>
+
+      <!-- Honeypot anti-bot : invisible pour les humains, doit rester vide. -->
+      <div class="hp" aria-hidden="true">
+        <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="submit-error" id="submit-error" role="alert" hidden>
+        <p id="submit-error-text"></p>
+        <button type="button" class="btn btn-secondary" id="retry"></button>
+      </div>
+
+      <nav class="nav">
+        <button type="button" class="btn btn-secondary" id="prev"></button>
+        <button type="submit" class="btn btn-primary" id="next"></button>
+      </nav>
+    </form>
+
+    <section class="success" id="success" hidden>
+      <h1 id="success-title" tabindex="-1"></h1>
+      <p id="success-message"></p>
+    </section>
+  </main>
+</body>
+</html>

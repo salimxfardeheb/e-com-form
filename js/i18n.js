@@ -38,6 +38,7 @@ export const I18N = {
     errorMaxItems: "{max} problèmes maximum.",
     errorStep: "Complète les questions obligatoires avant de continuer.",
     errorSubmit: "L'envoi a échoué. Vérifie ta connexion et réessaie.",
+    retry: "Réessayer",
 
     // Succès
     successTitle: "Merci !",
@@ -76,6 +77,7 @@ export const I18N = {
     errorMaxItems: "{max} مشاكل ماكسيموم.",
     errorStep: "جاوب على الأسئلة اللازمة قبل ما تكمّل.",
     errorSubmit: "ما تبعثش. شوف الكونيكسيون وعاود.",
+    retry: "عاود",
 
     // Succès
     successTitle: "صحّيت!",
